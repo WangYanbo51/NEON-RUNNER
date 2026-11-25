@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta name="theme-color" content="#05010f" />
+    <title>NEON RUNNER · 霓虹跑酷</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <canvas id="game"></canvas>
+    <div class="scanlines"></div>
+    <div class="vignette"></div>
+
+    <div id="hud" class="hud is-hidden">
+      <div class="hud-top">
+        <div class="score-box">
+          <span class="label">SCORE</span>
+          <span class="value" id="score">0</span>
+          <span class="coin-line"><i class="coin-icon"></i><b id="coins">0</b></span>
+        </div>
+        <div class="meter-box">
+          <div class="meter"><span>SPEED</span><b id="speed">0</b><em>km/h</em></div>
+          <div class="meter"><span>DIST</span><b id="dist">0</b><em>m</em></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="overlay-ready" class="overlay">
+      <div class="panel">
+        <div class="eyebrow">ENDLESS RUNNER · 2 0 7 7</div>
+        <h1>NEON<span>RUNNER</span></h1>
+        <p class="sub">霓虹轨道 · 无尽奔跑</p>
+        <div class="keys">
+          <div class="key"><kbd>←</kbd><kbd>→</kbd><em>切换轨道</em></div>
+          <div class="key"><kbd>↑</kbd><kbd>Space</kbd><em>跳跃</em></div>
+          <div class="key"><kbd>↓</kbd><em>滑铲</em></div>
+        </div>
+        <button class="cta" id="btn-start">开始奔跑</button>
+        <p class="hint">手机端上下左右滑动操作</p>
+      </div>
+    </div>
+
+    <div id="overlay-over" class="overlay is-hidden">
+      <div class="panel over">
+        <div class="eyebrow danger">SYSTEM CRASH</div>
+        <h2>撞 击</h2>
+        <div class="result">
+          <div class="res"><span>得分</span><b id="final-score">0</b></div>
+          <div class="res"><span>金币</span><b id="final-coins">0</b></div>
+          <div class="res"><span>距离</span><b id="final-dist">0</b></div>
+        </div>
+        <div class="best">最高分 <b id="best-score">0</b></div>
+        <button class="cta" id="btn-retry">再来一次</button>
+        <p class="hint">按 Enter / 空格 快速重开</p>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
